@@ -1,15 +1,31 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-figure = plt.figure(figsize=(8, 4.125))
+"""
+Approximation of function ussing Fourier series with approximation visualization
 
+x :     array
+        The range of the independent variable
+y :     function
+        Definition of the function that will be approximated
+"""
+
+# PARAMETERS
 pi = np.pi
 x = np.linspace(-1,1,100)
 y = x
 
+
+
+
 a0 = 1/pi * np.trapz(y, x, dx=1/100)
 
 y_fourier = np.zeros(len(x)) + a0/2
+
+
+
+
+figure = plt.figure(figsize=(8, 4.125))
 
 for n in range(1,100):
 
